@@ -11,6 +11,7 @@ import java.io.IOException;
 public class InputServlet extends HttpServlet {
   @Override
   public void init() throws ServletException {
+
     System.out.println("init 메서드 호출");
   }
 
