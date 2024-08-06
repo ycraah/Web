@@ -1,4 +1,4 @@
-package ycraah.web.web;
+package ycraah.web.web.calc;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
