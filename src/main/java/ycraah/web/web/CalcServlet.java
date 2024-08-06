@@ -48,16 +48,20 @@ public class CalcServlet extends HttpServlet {
 
   private static String calculate(float won, String operator){
     String result = null;
+    float USD_RATE = 1376.30f; float JPY_RATE = 943.96f;
+    float CNY_RATE = 192.65f; float GBP_RATE = 1754.85f;
+    float EUR_RATE = 1504.85f;
+
     if(operator.equals("dollar")){
-      result = String.format("%.6f", won/1376.30);
+      result = String.format("%.6f", won/USD_RATE);
     } else if (operator.equals("en")){
-      result = String.format("%.6f", won/943.96	);
+      result = String.format("%.6f", won/JPY_RATE	);
     } else if (operator.equals("wian")){
-      result = String.format("%.6f", won/192.65	);
+      result = String.format("%.6f", won/CNY_RATE	);
     } else if (operator.equals("pound")){
-      result = String.format("%.6f", won/1754.85	);
+      result = String.format("%.6f", won/GBP_RATE	);
     } else if (operator.equals("euro")){
-      result = String.format("%.6f", won/1504.85);
+      result = String.format("%.6f", won/EUR_RATE);
     }
     return result;
   }
