@@ -23,7 +23,7 @@ public class Ex1_1 extends HttpServlet {
     System.out.println("아이디 : " + user_id);
     System.out.println("비밀번호 : " + user_pw);
 
-    if((user_id != null && user_id.length() != 0) && (user_pw != null && user_pw.length() != 0)){
+    if((user_id != null || user_id.length() != 0) || (user_pw != null || user_pw.length() != 0)){
       out.print("<html><head><title>로그인 성공</title></head><body>");
       out.printf("<p>%s님의 로그인을 환영합니다.</p>", user_id);
       out.print("</body></html>");
